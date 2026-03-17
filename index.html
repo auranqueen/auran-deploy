@@ -241,6 +241,63 @@ body {
   position: relative;
 }
 
+/* MOBILE: <= 768px */
+@media (max-width: 768px) {
+  .main-layout {
+    padding-top: 44px;
+  }
+  .left-panel,
+  .right-panel {
+    display: none;
+  }
+  .center-area {
+    padding: 0;
+    align-items: stretch;
+  }
+  .phone-wrap {
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 44px);
+  }
+  .phone-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* TABLET: 769px ~ 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-layout {
+    padding-top: 44px;
+  }
+  .left-panel,
+  .right-panel {
+    display: none;
+  }
+  .center-area {
+    padding: 24px 24px 32px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .phone-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    height: calc(100vh - 44px - 48px);
+  }
+  .phone-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.04),
+      0 30px 60px rgba(0,0,0,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+}
+
 /* SCREENS */
 .screen {
   position: absolute;
